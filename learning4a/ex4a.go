@@ -33,7 +33,7 @@ type Mapper interface {
 func (i Ints) Map(f func(Int) Int) Ints {
 	j := make(Ints, len(i))
 	for k, v := range i {
-		j[k] = f(Int(v))
+		j[k] = f(v)
 	}
 	return j
 }
